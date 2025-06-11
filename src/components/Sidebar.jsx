@@ -2,7 +2,7 @@
 
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
-import { FaXTwitter } from 'react-icons/fa6';
+// import { FaXTwitter } from 'react-icons/fa6';
 import { HiHome, HiDotsHorizontal } from 'react-icons/hi';
 
 export default function Sidebar() {
@@ -12,7 +12,8 @@ export default function Sidebar() {
     <div className='flex flex-col p-3 justify-between h-screen'>
       <div className='flex flex-col gap-4 '>
         <Link href='/'>
-          <FaXTwitter className='w-16 h-16 cursor-pointer p-3 hover:bg-gray-100 rounded-full transition-all duration-200 ' />
+          {/* <FaXTwitter className='w-16 h-16 cursor-pointer p-3 hover:bg-gray-100 rounded-full transition-all duration-200 ' /> */}
+        <h1 className='text-2xl text-[#003E8F] font-extrabold cursor-pointer p-3 hover:bg-gray-100 rounded-full transition-all duration-200 '>SuperX</h1>
         </Link>
         <Link
           href='/'
