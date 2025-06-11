@@ -8,8 +8,8 @@ import CommentModal from '@/components/CommentModal';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'X Clone',
-  description: 'A clone of X website built with Next.js and Tailwind CSS',
+  title: 'SuperX',
+  description: 'A clone of X website built with Next.js, Firebase and Tailwind CSS',
 };
 
 export const dynamic = 'force-dynamic';
