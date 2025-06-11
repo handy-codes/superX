@@ -21,48 +21,50 @@ export default function Post({ post, id }) {
   }
 
   return (
-    <div className='flex p-3 border-b border-gray-200 hover:bg-gray-50'>
+    <div className='flex px-4 py-3 border-b border-gray-200 hover:bg-gray-50 max-w-full'>
       <img
         src={post?.profileImg}
         alt='user-img'
-        className='h-11 w-11 rounded-full mr-4'
+        className='h-11 w-11 rounded-full mr-4 flex-shrink-0'
       />
-      <div className='flex-1'>
-        <div className='flex items-center justify-between'>
-          <div className='flex items-center space-x-1 whitespace-nowrap'>
-            <h4 className='font-bold text-sm truncate'>{post?.name}</h4>
-            <span className='text-xs truncate'>@{post?.username}</span>
+      <div className='flex-1 overflow-hidden'>
+        {/* Top row with name, username, time, dots */}
+        <div className='flex items-center justify-between w-full'>
+          <div className='flex items-center gap-1 text-sm truncate max-w-[85%] sm:max-w-[90%]'>
+            <h4 className='font-bold truncate'>{post?.name}</h4>
+            <span className='text-gray-500 truncate'>@{post?.username}</span>
             {postDate ? (
-              <span className='text-xs text-gray-500'>
-                <ReactTimeAgo date={postDate} locale='en-US' />
+              <span className='text-xs text-gray-400 whitespace-nowrap'>
+                • <ReactTimeAgo date={postDate} locale='en-US' />
               </span>
             ) : (
-              <span className='text-xs text-gray-400'>Unknown time</span>
+              <span className='text-xs text-gray-400 whitespace-nowrap'>• Unknown</span>
             )}
           </div>
-          <HiDotsHorizontal className='text-sm' />
+          <HiDotsHorizontal className='text-gray-400 text-sm flex-shrink-0' />
         </div>
 
+        {/* Post text */}
         <Link href={`/posts/${id}`}>
-          <p className='text-gray-800 text-sm my-3'>{post?.text}</p>
+          <p className='text-gray-800 text-sm my-3 break-words'>{post?.text}</p>
         </Link>
-        <div className="w-full max-w-xl mx-auto">
-          {post?.image && (
-            <Link href={`/posts/${id}`}>
-              <div className='mt-2 rounded-2xl overflow-hidden'>
-                <img
-                  src={post.image}
-                  alt="post image"
-                  className='w-full h-auto max-h-96 object-cover rounded-2xl'
-                />
-              </div>
-            </Link>
-          )}
-        </div>
+
+        {/* Post image */}
+        {post?.image && (
+          <Link href={`/posts/${id}`}>
+            <div className='mt-2 rounded-2xl overflow-hidden'>
+              <img
+                src={post.image}
+                alt='post image'
+                className='w-full h-56 object-cover rounded-2xl'
+              />
+            </div>
+          </Link>
+        )}
+
+        {/* Icons */}
         <Icons id={id} uid={post.uid} />
       </div>
     </div>
   );
 }
-
-
