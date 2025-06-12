@@ -46,7 +46,7 @@ export default function Post({ post, id }) {
 
         {/* Post text */}
         <Link href={`/posts/${id}`}>
-          <p className='text-gray-800 text-sm my-3 break-words'>{post?.text}</p>
+          <p className='text-sm text-gray-800 my-2 break-words'>{post?.text}</p>
         </Link>
 
         {/* Post image */}
@@ -56,7 +56,7 @@ export default function Post({ post, id }) {
               <img
                 src={post.image}
                 alt='post image'
-                className='w-full h-56 object-cover rounded-2xl'
+                className='w-full h-64 object-cover rounded-2xl'
               />
             </div>
           </Link>

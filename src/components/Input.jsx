@@ -89,26 +89,28 @@ export default function Input() {
 
   if (!session) return null;
   return (
-    <div className='flex border-b border-gray-200 p-3 space-x-3 w-full'>
+    <div className='w-full px-2 sm:px-4 flex border-b border-gray-200 py-3 space-x-3'>
       <img
         src={session.user.image}
         alt='user-img'
         className='h-11 w-11 rounded-full cursor-pointer hover:brightness-95'
       />
       <div className='w-full divide-y divide-gray-200'>
-        <textarea
-          className='w-full border-none outline-none tracking-wide min-h-[50px] text-gray-700 '
-          placeholder='Whats happening'
-          rows='2'
+      <textarea
+          className="w-full border-none outline-none text-sm tracking-wide min-h-[50px] resize-none text-gray-700"
+          placeholder="What's happening?"
+          rows="2"
           value={text}
           onChange={(e) => setText(e.target.value)}
         ></textarea>
+
         {selectedFile && (
           <img
             src={imageFileUrl}
-            alt='image'
-            className={`w-full max-h-[250px] object-cover cursor-pointer
-            ${imageFileUploading ? 'animate-pulse' : ''}`}
+            alt="upload preview"
+            className={`w-full h-64 object-cover rounded-2xl mt-2 ${
+              imageFileUploading ? 'animate-pulse' : ''
+            }`}
           />
         )}
         <div className='flex items-center justify-between pt-2.5'>

@@ -23,7 +23,7 @@ export default async function Feed() {
   });
 
   return (
-    <div>
+    <div className='w-full px-2 sm:px-4'>
       {data.map((post) => (
         <Post key={post.id} post={post} id={post.id} />
       ))}
