@@ -93,7 +93,7 @@ export default function Input() {
       <img
         src={session.user.image}
         alt='user-img'
-        className='h-11 w-11 rounded-full cursor-pointer hover:brightness-95'
+        className='h-8 w-8 rounded-full cursor-pointer hover:brightness-95'
       />
       <div className='w-full divide-y divide-gray-200'>
         <textarea

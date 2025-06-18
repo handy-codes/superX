@@ -21,10 +21,11 @@ export default function RootLayout({ children }) {
         <body className={inter.className}>
           <div className='flex justify-between max-w-6xl mx-auto'>
             {/* <div className='w-full sm:w-64 border-r border-gray-200 bg-white fixed sm:relative'> */}
-            <div className='hidden sm:inline border-r h-screen sticky top-0'>
+            <div className='hidden sm:block sticky top-0 h-screen border-r'>
               <Sidebar />
             </div>
-            <div className='w-2xl flex-1'>{children}</div>
+            {/* <div className='w-2xl flex-1'>{children}</div> */}
+            <div className='flex-1 w-full max-w-2xl px-2 sm:px-4'>{children}</div>
             <div className='lg:flex-col p-3 h-screen border-l hidden lg:flex w-[24rem]'>
               <div className='sticky top-0 bg-white py-2'>
                 <input

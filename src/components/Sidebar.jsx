@@ -32,7 +32,8 @@ export default function Sidebar() {
       </div>
  */}
       {/* Sidebar for Desktop */}
-      <div className='md:flex flex-col justify-between p-3 h-screen w-64 border-r'>
+      {/* <div className='md:flex flex-col justify-between p-3 h-screen w-64 border-r'> */}
+      <div className='hidden top-20 md:flex flex-col justify-between p-3 h-[100vh] w-64 border-r sticky overflow-y-auto'>
         <div className='flex flex-col gap-4'>
           <Link href='/'>
             <h1 className='text-2xl text-[#003E8F] font-extrabold cursor-pointer p-3 hover:bg-gray-100 rounded-full'>
@@ -67,9 +68,9 @@ export default function Sidebar() {
             <img
               src={session.user.image}
               alt='user-img'
-              className='h-10 w-10 rounded-full xl:mr-2'
+              className='h-8 w-8 rounded-full xl:mr-2'
             />
-            <div className='hidden xl:inline'>
+            <div className='xl:inline'>
               <h4 className='font-bold'>{session.user.name}</h4>
               <p className='text-gray-500'>@{session.user.username}</p>
             </div>

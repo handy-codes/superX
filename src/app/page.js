@@ -5,7 +5,10 @@ import ClientHeader from '@/components/ClientHeader';
 export default function page() {
 
   return (
-    <div className='max-w-xl mx-auto border-r border-l min-h-screen'>
+    // <div className='max-w-xl mx-auto border-r border-l min-h-screen'>
+    // <div className='w-full max-w-xl mx-auto min-h-screen border-r border-l sm:border-none'>
+    <div className="w-full max-w-xl mx-auto min-h-screen border-x sm:border-none px-2 sm:px-4">
+
       
       {/* <div className='flex justify-between mt-4 mx-auto'>
         <div className='py-2 px-3 sticky top-0 z-50 bg-white border-b border-gray-200'>

@@ -25,7 +25,7 @@ export default function Post({ post, id }) {
       <img
         src={post?.profileImg}
         alt='user-img'
-        className='h-11 w-11 rounded-full mr-4 flex-shrink-0'
+        className='h-8 w-8 rounded-full mr-4 flex-shrink-0'
       />
       <div className='flex-1 overflow-hidden'>
         {/* Top row with name, username, time, dots */}
@@ -52,11 +52,18 @@ export default function Post({ post, id }) {
         {/* Post image */}
         {post?.image && (
           <Link href={`/posts/${id}`}>
-            <div className='mt-2 rounded-2xl overflow-hidden'>
+            {/* <div className="mt-2 rounded-2xl overflow-hidden w-full">
               <img
                 src={post.image}
-                alt='post image'
-                className='w-full h-56 object-cover rounded-2xl'
+                alt="post image"
+                className="block w-full h-auto rounded-2xl object-cover"
+              />
+            </div> */}
+            <div className="mt-2 rounded-2xl overflow-hidden aspect-[16/9] w-full">
+              <img
+                src={post.image}
+                alt="post image"
+                className="w-full h-full object-cover"
               />
             </div>
           </Link>
