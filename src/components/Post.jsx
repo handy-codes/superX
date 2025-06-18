@@ -46,7 +46,7 @@ export default function Post({ post, id }) {
 
         {/* Post text */}
         <Link href={`/posts/${id}`}>
-          <p className='text-gray-800 text-sm my-3 break-words'>{post?.text}</p>
+          <p className='text-sm text-gray-800 my-2 break-words'>{post?.text}</p>
         </Link>
 
         {/* Post image */}
@@ -55,6 +55,7 @@ export default function Post({ post, id }) {
             {/* <div className="mt-2 rounded-2xl overflow-hidden w-full">
               <img
                 src={post.image}
+<<<<<<< HEAD
                 alt="post image"
                 className="block w-full h-auto rounded-2xl object-cover"
               />
@@ -64,6 +65,10 @@ export default function Post({ post, id }) {
                 src={post.image}
                 alt="post image"
                 className="w-full h-full object-cover"
+=======
+                alt='post image'
+                className='w-full h-64 object-cover rounded-2xl'
+>>>>>>> 52d93ae9075c11f536fe0bcabe26264006f0e402
               />
             </div>
           </Link>

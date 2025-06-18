@@ -5,6 +5,7 @@ import ClientHeader from '@/components/ClientHeader';
 export default function page() {
 
   return (
+<<<<<<< HEAD
     // <div className='max-w-xl mx-auto border-r border-l min-h-screen'>
     // <div className='w-full max-w-xl mx-auto min-h-screen border-r border-l sm:border-none'>
     <div className="w-full max-w-xl mx-auto min-h-screen border-x sm:border-none px-2 sm:px-4">
@@ -36,5 +37,12 @@ export default function page() {
       <Input />
       <Feed />
     </div>
+=======
+  <main className="w-full mx-auto max-w-[600px] border-x border-gray-200 min-h-screen px-2 sm:px-4">
+    <ClientHeader />
+    <Input />
+    <Feed />
+  </main>
+>>>>>>> 52d93ae9075c11f536fe0bcabe26264006f0e402
   );
 }
