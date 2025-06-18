@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -52,23 +53,11 @@ export default function Post({ post, id }) {
         {/* Post image */}
         {post?.image && (
           <Link href={`/posts/${id}`}>
-            {/* <div className="mt-2 rounded-2xl overflow-hidden w-full">
-              <img
-                src={post.image}
-<<<<<<< HEAD
-                alt="post image"
-                className="block w-full h-auto rounded-2xl object-cover"
-              />
-            </div> */}
             <div className="mt-2 rounded-2xl overflow-hidden aspect-[16/9] w-full">
               <img
                 src={post.image}
                 alt="post image"
                 className="w-full h-full object-cover"
-=======
-                alt='post image'
-                className='w-full h-64 object-cover rounded-2xl'
->>>>>>> 52d93ae9075c11f536fe0bcabe26264006f0e402
               />
             </div>
           </Link>
